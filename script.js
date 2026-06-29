@@ -29,13 +29,15 @@ filterButtons.forEach((button) => {
 
     filterButtons.forEach((btn) => {
       btn.classList.remove("active");
+      btn.setAttribute("aria-pressed", "false");
     });
 
     button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
 
     portfolioCards.forEach((card) => {
-      const category = card.dataset.category;
-      const show = filter === "all" || filter === category;
+      const categories = (card.dataset.category || "").split(/\s+/);
+      const show = filter === "all" || categories.includes(filter);
       card.classList.toggle("is-hidden", !show);
     });
   });
@@ -83,7 +85,7 @@ if (videoModal && modalVideo && modalTitle) {
       document.body.classList.add("modal-open");
 
       modalVideo.play().catch(() => {
-        // If autoplay is blocked, press play manually.
+        // Browser may block autoplay. The user can press play manually.
       });
     });
   });

@@ -490,36 +490,48 @@ button {
   flex-direction: column;
 }
 
-.media-frame {
-  position: relative;
+.portfolio-card.is-hidden {
+  display: none;
+}
+
+.video-card-button {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
   border: 0;
   padding: 0;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: #050914;
   cursor: pointer;
-  appearance: none;
-}
-
-.media-frame video,
-.media-frame img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  background: #050914;
-}
-
-.video-trigger {
+  background: transparent;
   color: inherit;
   text-align: left;
 }
 
-.video-trigger video {
-  pointer-events: none;
+.video-thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background:
+    radial-gradient(circle at 22% 22%, rgba(215, 168, 79, .55), transparent 34%),
+    radial-gradient(circle at 80% 35%, rgba(15, 123, 112, .38), transparent 30%),
+    linear-gradient(135deg, #0b1220, #142135);
+}
+
+.video-thumb-icon {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .18);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: .04em;
+  backdrop-filter: blur(10px);
 }
 
 .play-badge {
@@ -592,10 +604,6 @@ button {
   background:
     radial-gradient(circle at 25% 25%, rgba(215, 168, 79, .42), transparent 32%),
     linear-gradient(135deg, #f7efe0, #e5f4f0);
-}
-
-.portfolio-card.is-hidden {
-  display: none;
 }
 
 .service-grid {
