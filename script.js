@@ -58,7 +58,6 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-/* Video popup player */
 const videoButtons = document.querySelectorAll("[data-video-src]");
 const videoModal = document.querySelector("[data-video-modal]");
 const modalVideo = document.querySelector("[data-modal-video]");
@@ -72,6 +71,11 @@ if (videoModal && modalVideo && modalTitle) {
       const videoTitle = button.getAttribute("data-video-title") || "Video Preview";
 
       modalTitle.textContent = videoTitle;
+
+      modalVideo.pause();
+      modalVideo.removeAttribute("src");
+      modalVideo.load();
+
       modalVideo.setAttribute("src", videoSrc);
       modalVideo.load();
 
@@ -79,7 +83,7 @@ if (videoModal && modalVideo && modalTitle) {
       document.body.classList.add("modal-open");
 
       modalVideo.play().catch(() => {
-        // If the browser blocks autoplay, the user can press play manually.
+        // If autoplay is blocked, press play manually.
       });
     });
   });
