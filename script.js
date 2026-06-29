@@ -29,11 +29,9 @@ filterButtons.forEach((button) => {
 
     filterButtons.forEach((btn) => {
       btn.classList.remove("active");
-      btn.setAttribute("aria-pressed", "false");
     });
 
     button.classList.add("active");
-    button.setAttribute("aria-pressed", "true");
 
     portfolioCards.forEach((card) => {
       const category = card.dataset.category;
@@ -60,6 +58,7 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
+/* Video popup player */
 const videoButtons = document.querySelectorAll("[data-video-src]");
 const videoModal = document.querySelector("[data-video-modal]");
 const modalVideo = document.querySelector("[data-modal-video]");
@@ -72,13 +71,15 @@ if (videoModal && modalVideo && modalTitle) {
       const videoSrc = button.getAttribute("data-video-src");
       const videoTitle = button.getAttribute("data-video-title") || "Video Preview";
 
-      modalVideo.src = videoSrc;
       modalTitle.textContent = videoTitle;
+      modalVideo.setAttribute("src", videoSrc);
+      modalVideo.load();
+
       videoModal.hidden = false;
       document.body.classList.add("modal-open");
 
       modalVideo.play().catch(() => {
-        /* Some browsers block autoplay. The user can press play manually. */
+        // If the browser blocks autoplay, the user can press play manually.
       });
     });
   });

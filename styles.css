@@ -184,10 +184,10 @@ button {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(11,18,32,.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(11,18,32,.045) 1px, transparent 1px);
+    linear-gradient(rgba(11, 18, 32, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 18, 32, .045) 1px, transparent 1px);
   background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 80%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .55), transparent 80%);
 }
 
 .hero-grid {
@@ -275,10 +275,10 @@ button {
 
 .trust-row div {
   padding: 18px;
-  border: 1px solid rgba(11,18,32,.08);
-  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(11, 18, 32, .08);
+  background: rgba(255, 255, 255, .72);
   border-radius: 22px;
-  box-shadow: 0 18px 45px rgba(11,18,32,.06);
+  box-shadow: 0 18px 45px rgba(11, 18, 32, .06);
 }
 
 .trust-row strong {
@@ -298,8 +298,8 @@ button {
   position: relative;
   padding: 14px;
   border-radius: 40px;
-  background: rgba(255,255,255,.7);
-  border: 1px solid rgba(255,255,255,.86);
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid rgba(255, 255, 255, .86);
   box-shadow: var(--shadow);
 }
 
@@ -323,7 +323,7 @@ button {
   bottom: 38px;
   width: 84px;
   height: 84px;
-  border: 18px solid rgba(15,123,112,.15);
+  border: 18px solid rgba(15, 123, 112, .15);
   border-radius: 50%;
   z-index: -1;
 }
@@ -352,7 +352,7 @@ button {
 }
 
 .strip-track span {
-  color: rgba(255,255,255,.86);
+  color: rgba(255, 255, 255, .86);
   font-weight: 800;
   font-size: .95rem;
 }
@@ -418,7 +418,7 @@ button {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 24px;
-  box-shadow: 0 18px 48px rgba(11,18,32,.05);
+  box-shadow: 0 18px 48px rgba(11, 18, 32, .05);
 }
 
 .quick-list strong {
@@ -439,7 +439,7 @@ button {
   height: 16px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 8px rgba(15,123,112,.12);
+  box-shadow: 0 0 0 8px rgba(15, 123, 112, .12);
 }
 
 .muted {
@@ -482,9 +482,9 @@ button {
 .portfolio-card {
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(11,18,32,.08);
+  border: 1px solid rgba(11, 18, 32, .08);
   border-radius: var(--radius);
-  box-shadow: 0 20px 60px rgba(11,18,32,.08);
+  box-shadow: 0 20px 60px rgba(11, 18, 32, .08);
   min-height: 270px;
   display: flex;
   flex-direction: column;
@@ -501,6 +501,7 @@ button {
   border-radius: var(--radius) var(--radius) 0 0;
   background: #050914;
   cursor: pointer;
+  appearance: none;
 }
 
 .media-frame video,
@@ -515,6 +516,10 @@ button {
 .video-trigger {
   color: inherit;
   text-align: left;
+}
+
+.video-trigger video {
+  pointer-events: none;
 }
 
 .play-badge {
@@ -570,7 +575,7 @@ button {
 .tag-row span {
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(15,123,112,.08);
+  background: rgba(15, 123, 112, .08);
   color: var(--accent);
   font-size: .78rem;
   font-weight: 800;
@@ -585,7 +590,7 @@ button {
   letter-spacing: -.05em;
   color: var(--ink);
   background:
-    radial-gradient(circle at 25% 25%, rgba(215,168,79,.42), transparent 32%),
+    radial-gradient(circle at 25% 25%, rgba(215, 168, 79, .42), transparent 32%),
     linear-gradient(135deg, #f7efe0, #e5f4f0);
 }
 
@@ -604,7 +609,7 @@ button {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: #fff;
-  box-shadow: 0 20px 60px rgba(11,18,32,.06);
+  box-shadow: 0 20px 60px rgba(11, 18, 32, .06);
 }
 
 .service-number {
@@ -615,14 +620,14 @@ button {
   height: 46px;
   margin-bottom: 22px;
   border-radius: 14px;
-  background: rgba(15,123,112,.10);
+  background: rgba(15, 123, 112, .10);
   color: var(--accent);
   font-weight: 900;
 }
 
 .dark {
   background:
-    radial-gradient(circle at 85% 20%, rgba(15,123,112,.24), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(15, 123, 112, .24), transparent 28%),
     linear-gradient(135deg, #0b1220, #111a2c);
   color: #fff;
 }
@@ -650,7 +655,7 @@ button {
   top: 10px;
   bottom: 10px;
   width: 1px;
-  background: rgba(255,255,255,.14);
+  background: rgba(255, 255, 255, .14);
 }
 
 .timeline-item {
@@ -669,9 +674,9 @@ button {
 .timeline-card {
   position: relative;
   padding: 28px;
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid rgba(255, 255, 255, .12);
   border-radius: var(--radius);
-  background: rgba(255,255,255,.06);
+  background: rgba(255, 255, 255, .06);
   backdrop-filter: blur(14px);
 }
 
@@ -684,15 +689,15 @@ button {
   height: 14px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: 0 0 0 8px rgba(215,168,79,.16);
+  box-shadow: 0 0 0 8px rgba(215, 168, 79, .16);
 }
 
 .timeline-card p {
-  color: rgba(255,255,255,.72);
+  color: rgba(255, 255, 255, .72);
 }
 
 .timeline-card .company {
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
   font-weight: 800;
   margin-top: 6px;
 }
@@ -705,9 +710,9 @@ button {
   padding: 42px;
   border-radius: 34px;
   background:
-    radial-gradient(circle at 85% 20%, rgba(215,168,79,.35), transparent 30%),
+    radial-gradient(circle at 85% 20%, rgba(215, 168, 79, .35), transparent 30%),
     linear-gradient(135deg, #f8f4ec, #eef7f5);
-  border: 1px solid rgba(11,18,32,.08);
+  border: 1px solid rgba(11, 18, 32, .08);
   box-shadow: var(--shadow);
 }
 
@@ -754,7 +759,7 @@ button {
   padding: 18px;
   border-radius: 22px;
   background: var(--soft-2);
-  border: 1px solid rgba(15,123,112,.08);
+  border: 1px solid rgba(15, 123, 112, .08);
 }
 
 .contact-card span {
@@ -780,7 +785,7 @@ button {
 .footer {
   padding: 28px 0;
   background: var(--ink);
-  color: rgba(255,255,255,.78);
+  color: rgba(255, 255, 255, .78);
 }
 
 .footer-inner {
